@@ -16,6 +16,14 @@
 <body>
     <script type="text/javascript">
 
+    function grabFirstLetter(a){
+        return(a[0])
+    }
+
+    function grabLastLetter(a){
+        return(a[a.length - 1])
+    }
+
     if ((grabFirstLetter("Shane") == "S") && (grabLastLetter("Roger") == "r")){
         var comment = "EXERCISE COMPLETED";
         var newHeader = document.createElement('h1');

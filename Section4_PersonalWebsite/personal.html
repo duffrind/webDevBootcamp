@@ -1,11 +1,41 @@
 <!DOCTYPE HTML>
     <html>
         <head>
-            <title>[Your Name]'s Personal Website</title>
+            <title>David's Personal Website</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js"></script>
+            <link rel="stylesheet" type="text/css" href="style.css">
         </head>
         <body>
-            <h1>Looking pretty boring here... wish I had some CSS</h1>
-            <p>D3 Has been loaded into this page from a CDN.</p>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">David's Personal Website</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#viz">Visualizations</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="jumbotron">
+                    <h1 class="zoom">Welcome to my website!</h1>
+                    <p>Thank you for viewing my website. The current time is <span id="time"></span>.</p>
+                    <p>Please choose a distribution below</p>
+                    <div class="form-group">
+                      <label for="dist">Select distribution:</label>
+                      <select class="form-control" id="dist" onchange="createViz()">
+                        <option>Normal</option>
+                        <option>Uniform</option>
+                      </select>
+                    </div>
+                    <p>Please note that the Normal Distribution is actually Bates Distribution with N=10</p>
+                </div>
+                <svg id="viz" width="960" height="500"></svg>
+            </div>
+            <script type="text/javascript" src="script.js"></script>
         </body>
     </html>
